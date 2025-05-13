@@ -92,7 +92,7 @@
     document.getElementById('captcha-image').addEventListener('click', generateCaptcha);
 
     document.getElementById('submit-button').addEventListener('click', function () {
-        const userInput = document.getElementById('captcha-input').value;
+        const userInput = document.getElementById('captcha-input').value.trim().toLowerCase();
         const errorMessage = document.getElementById('error-message');
 
         if (userInput === window.sessionStorage.getItem('captcha')) {
