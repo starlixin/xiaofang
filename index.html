@@ -96,7 +96,8 @@
         const errorMessage = document.getElementById('error-message');
 
         if (userInput === window.sessionStorage.getItem('captcha')) {
-            window.location.href = 'https://example.com'; // 跳转到指定页面
+		// 验证码正确，跳转到 page.html
+            window.location.href = 'page.html'; // 确保这个文件名与你的跳转页一致
         } else {
             errorMessage.textContent = '验证码错误，请重新输入！';
             generateCaptcha(); // 刷新验证码
